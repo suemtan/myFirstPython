@@ -1,0 +1,54 @@
+#list
+bikes =['trek', 'redline', 'giant']
+print ">> Using List << "
+print bikes
+
+copy_bikes = bikes[:]
+print "copy of bikes : ", copy_bikes
+
+bikes[1] = 'mountain'
+print "change in index 1 of the list :", bikes[1]
+
+#append list
+bikes.append('racing')
+print "After adding racing bike :", bikes
+
+#popping elements
+bikes.remove('redline')
+print "after removing redline : ", bikes
+#tuples
+# they are similar to lists, but items in a tuple can't be modified
+dimensions =(1920, 1080)
+print "tuples : ", dimensions
+
+s_dimensions = ("first", "second")
+print "index 1 of tuples : ", s_dimensions[1]
+
+#s_dimensions[1] = 'third'
+#print "change in index 1 of the tuple :", bikes[1]
+
+# find the value in the list
+if 'giant' in bikes:
+    print "found it!"
+
+item = 'redline'
+if item not in copy_bikes:
+    print "item is not in the list"
+else:
+    print item, " is in the list"
+
+#dictionary
+print ">> Using Dictionary << "
+dict = {'color' : 'red', 'food' : 'pizza', 'dessert' : 'cake'}
+
+print "favorite color is : ", dict['color']
+print "favorite dessert is : ", dict['dessert']
+
+#dictionary loop
+for name, value in dict.items():
+    print "Susan " + "loves " + str(value) + " in " + name
+
+#user input
+age = input("How old are you?")
+print int(age)
+
