@@ -11,7 +11,11 @@ class ElectricCar(Car):
         self.battery_size = 70
         # charge level in %
         self.charge_level = 0
-
+        
+     def display_carinfo(self):
+        #display electric car info
+        Car.display_carinfo(self)
+        
     def charge(self):
         # fully charge
         self.charge_level = 100
@@ -22,5 +26,6 @@ class ElectricCar(Car):
 my_newcar = ElectricCar('Tesla', 'model S', 2016)
 
 print "*****My New Car Information*****"
+my_newcar.display_carinfo()
 my_newcar.charge()
 my_newcar.drive()
