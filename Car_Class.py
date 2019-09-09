@@ -25,6 +25,22 @@ class Car():
         print self.model
         print self.year
 
+    def update_fuel_level(self, new_level):
+        #update the fuel level
+        if new_level <= self.fuel_cap:
+            self.fuel_level = new_level
+        else:
+            print "The tank can't hold the fuel that much"
+
+    def add_fuel(self, amount):
+        #add fuel
+        if (self.fuel_level + amount <= self.fuel_cap):
+            self.fuel_level+= amount
+            print "Added fuel."
+        else:
+            print  "The tank can't hold that much!"
+
+
 my_car = Car('Honda', '98', 2018)
 
 #print attribute values functions from car class
